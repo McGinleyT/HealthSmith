@@ -10,7 +10,7 @@ services:
     labels:
       - "traefik.enable=true"
       # Main domain
-      - "traefik.http.routers.healthsmith.rule=Host(`://healthsmithllc.com`)"
+      - "traefik.http.routers.healthsmith.rule=Host(`healthsmithllc.com`) || Host(`www.healthsmithllc.com`)"
       - "traefik.http.routers.healthsmith.entrypoints=web"
       # Internal service port
       - "traefik.http.services.healthsmith.loadbalancer.server.port=5005"
