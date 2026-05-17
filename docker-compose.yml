@@ -1,0 +1,21 @@
+services:
+  healthsmith:
+    build: ./healthsmith
+    expose:
+      - 5005
+    container_name: healthsmith
+    restart: unless-stopped
+    env_file:
+      - .env
+    labels:
+      - "traefik.enable=true"
+      # Main domain
+      - "traefik.http.routers.healthsmith.rule=Host(`://healthsmithllc.com`)"
+      - "traefik.http.routers.healthsmith.entrypoints=web"
+      # Internal service port
+      - "traefik.http.services.healthsmith.loadbalancer.server.port=5005"
+    networks:
+      - proxy
+networks:
+  proxy:
+    external: true
