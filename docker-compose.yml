@@ -16,6 +16,23 @@ services:
       - "traefik.http.services.healthsmith.loadbalancer.server.port=5005"
     networks:
       - proxy
+  smithmentalwellness:
+    build: ./smithmentalwellness
+    expose:
+      - 5006
+    container_name: smithmentalwellness
+    restart: unless-stopped
+    env_file:
+      - .env
+    labels:
+      - "traefik.enable=true"
+      # Main domain
+      - "traefik.http.routers.smithmentalwellness.rule=Host(`smithmentalwellness.com`) || Host(`www.smithmentalwellness.com`)"
+      - "traefik.http.routers.smithmentalwellness.entrypoints=web"
+      # Internal service port
+      - "traefik.http.services.smithmentalwellness.loadbalancer.server.port=5006"
+    networks:
+      - proxy
 networks:
   proxy:
     external: true

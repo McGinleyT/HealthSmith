@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>{% block title %}Smith Mental Wellness{% endblock %}</title>
+    <link rel="stylesheet" href="../static/style.css" />
+    <link rel="icon" href="../static/logo.png" />
+  </head>
+  <body>
+    <nav>
+      <div class="nav__titleblock">
+        <img class="nav__logo" src="../static/logo.png" />
+        <div class="title">
+          <h1>Smith</h1>
+          <h1 class="title--sans">MENTAL WELLNESS</h1>
+        </div>
+      </div>
+      <ul class="nav__list">
+        <li class="nav__listelement"><a class="nav__link" href="/">Home</a></li>
+        <li class="nav__listelement">
+          <a class="nav__link" href="/services">Services</a>
+        </li>
+        <li class="nav__listelement">
+          <a class="nav__link" href="/about">About</a>
+        </li>
+        <li class="nav__listelement">
+          <a class="nav__link" href="/contact">Contact</a>
+        </li>
+        <li class="nav__listelement">
+          <a class="nav__link" href="/schedule">Schedule</a>
+        </li>
+      </ul>
+    </nav>
+
+    <main class="main">{% block content %}{% endblock %}</main>
+
+    <footer>
+      {% block footer %}&copy; 2026 Smith Mental Wellness |
+      <a href="/privacy">Privacy Policy</a>{% endblock %}
+    </footer>
+  </body>
+</html>

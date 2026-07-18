@@ -1,0 +1,80 @@
+{% extends "base.html" %} {% block title %}Smith Mental Wellness{% endblock %}
+{% block content %}
+<div class="bio" style="background-image: url(../static/grain_splash.jpg)">
+  <div class="bio__header">
+    <div
+      class="bio__image__container"
+      style="background-image: url(../static/logo.png)"
+    ></div>
+    <div class="bio__vertical">
+      <h1 class="bio__title" style="font-weight: bold; font-size: 6rem">
+        Welcome
+      </h1>
+      <h1 class="bio__title" style="font-style: italic">
+        I'm so glad you're here!
+      </h1>
+      <br />
+      <div style="float: left; margin: 20px">
+        <a
+          href="https://phr.charmtracker.com/login.sas?FACILITY_ID=6da761489431a97490e860b30dec1db93b5c1b58546bacd898ee2e5ce9d5cc8ac81b440bc8a53a00"
+          target="_blank"
+          class="button"
+          >Patient Portal</a
+        >
+      </div>
+    </div>
+  </div>
+</div>
+<br />
+<div class="main__body">
+  <div class="card">
+    <img class="card__image" src="../static/road_splash.jpg" alt="roadway" />
+    <h2 class="main__subtitle">You Are Not Alone</h2>
+    <hr class="main__hr" />
+    <p class="main__text">
+      Reaching out for mental health care can feel like a big step, and I want
+      you to know that you're not alone. At Smith Mental Wellness, you'll find a
+      compassionate, welcoming space where you can feel heard, supported, and
+      respected.
+    </p>
+    <p class="main__text">
+      It is a privilege to be part of your journey, and I look forward to
+      partnering with you as we work toward lasting mental wellness.
+    </p>
+  </div>
+  <div class="card">
+    <img
+      class="card__image"
+      src="../static/arch_splash.jpg"
+      alt="arch of trees"
+    />
+    <h2 class="main__subtitle">Flexible Options</h2>
+    <hr class="main__hr" />
+    <p class="main__text">
+      <b>In-person appointments</b> or <b>secure telehealth visits</b> are
+      available for patients throughout Ohio.
+    </p>
+  </div>
+  <div class="card">
+    <img class="card__image" src="../static/forest_splash.jpg" alt="forest" />
+    <h2 class="main__subtitle">Now Accepting New Patients</h2>
+    <hr class="main__hr" />
+    <p class="main__text">
+      Ready to begin your mental wellness journey? Whether you're seeking care
+      for yourself or a loved one, I'm here to help you take the next step
+      toward lasting mental wellness.
+    </p>
+    <ul class="main__text">
+      <li><b>Call</b>: <a href="tel:+19378825540">(937) 882-5540</a></li>
+      <li>
+        <b>Email</b>:
+        <a href="mailto:JSmith@SmithMentalWellness.com"
+          >jsmith@smithmentalwellness.com</a
+        >
+      </li>
+      <li><b>Self-Schedule</b>: <a href="/schedule">Click here!</a></li>
+      <li><b>Telehealth appointments available throughout Ohio</b></li>
+    </ul>
+  </div>
+</div>
+{% endblock %}

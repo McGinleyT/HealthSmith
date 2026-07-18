@@ -1,0 +1,18 @@
+{% extends "base.html" %} {% block title %}Schedule{% endblock %} {% block
+content %}
+<div
+  class="main__wide"
+  style="background-image: url(../static/forest_splash.jpg)"
+>
+  <h1 class="main__title">Schedule an Appointment</h1>
+</div>
+<div class="main__body">
+  <iframe
+    width="100%"
+    height="750"
+    src="https://ehr.charmtracker.com/publicCal.sas?method=getCal&digest=3b5c1b58546bacd82e92e9396b7eb77fadae036d71acda10e8c47f02596dc9cc6ee57013c1a537e6f0abbc9d99600e68a0ae868b6eb0918a"
+    style="overflow: hidden"
+    frameborder="0"
+  ></iframe>
+</div>
+{% endblock %}
