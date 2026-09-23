@@ -27,5 +27,9 @@ def schedule():
 def privacy():
     return render_template('privacy.html')
 
+@app.route("/hipaa")
+def hipaa():
+    return render_template('hipaa.html')
+
 if __name__ == "__main__":
     app.run(host="0.0.0.0", port=5006, debug=True)
